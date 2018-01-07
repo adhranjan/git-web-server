@@ -30,9 +30,6 @@ app.use((req, res, next)=>{
 
 app.use((req,res,next)=>{
   next()
-  /*res.render("warn.hbs",{
-    pageContent:"This is a warning content",
-  })*/
 })
 
 app.use(express.static(__dirname + "/public"))
@@ -48,6 +45,12 @@ app.get('/',(req,res) => {
 app.get('/about',(req,res)=>{
   res.render("about.hbs",{
     pageTitle:"About Page",
+  })
+})
+
+app.get('/projects',(req,res)=>{
+  res.render("projects.hbs",{
+    pageTitle:"Project Page",
   })
 })
 
