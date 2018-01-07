@@ -29,10 +29,10 @@ app.use((req, res, next)=>{
 });
 
 app.use((req,res,next)=>{
-
-  res.render("warn.hbs",{
+  next()
+  /*res.render("warn.hbs",{
     pageContent:"This is a warning content",
-  })
+  })*/
 })
 
 app.use(express.static(__dirname + "/public"))
